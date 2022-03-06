@@ -1,0 +1,88 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-9a6f3bf6.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-530506a1.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/runtime/components/layout.svelte",
+      "src/routes/__error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/create.svelte",
+      "src/routes/dumb/[room].svelte"
+    ]
+  },
+  ".svelte-kit/runtime/components/layout.svelte": {
+    "file": "layout.svelte-bd505dc0.js",
+    "src": ".svelte-kit/runtime/components/layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-530506a1.js"
+    ]
+  },
+  "src/routes/__error.svelte": {
+    "file": "pages/__error.svelte-5d4e2e2a.js",
+    "src": "src/routes/__error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-530506a1.js"
+    ],
+    "css": [
+      "assets/pages/__error.svelte-7abd3c58.css"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-6d00e45c.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-530506a1.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-0a8ef869.css"
+    ]
+  },
+  "src/routes/create.svelte": {
+    "file": "pages/create.svelte-8be92331.js",
+    "src": "src/routes/create.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-530506a1.js",
+      "_supabase-0cc7a4f5.js"
+    ],
+    "css": [
+      "assets/pages/create.svelte-a8f6048a.css"
+    ]
+  },
+  "src/routes/dumb/[room].svelte": {
+    "file": "pages/dumb/_room_.svelte-276ad6a7.js",
+    "src": "src/routes/dumb/[room].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-530506a1.js",
+      "_supabase-0cc7a4f5.js"
+    ],
+    "css": [
+      "assets/pages/dumb/_room_.svelte-a6fa6548.css"
+    ]
+  },
+  "_vendor-530506a1.js": {
+    "file": "chunks/vendor-530506a1.js",
+    "css": [
+      "assets/vendor-ec9510ad.css"
+    ]
+  },
+  "_supabase-0cc7a4f5.js": {
+    "file": "chunks/supabase-0cc7a4f5.js",
+    "imports": [
+      "_vendor-530506a1.js"
+    ]
+  }
+}
