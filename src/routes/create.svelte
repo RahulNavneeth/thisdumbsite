@@ -66,6 +66,9 @@
 </script>
 
 <div class="container">
+	{#if error.length != 0}
+		<h2>{error}</h2>
+	{/if}
 	{#if showCode === false}
 		{#if fileData.length != 0}
 			<img style="width:350px;border-radius:20px;" src={fileData} alt="ShowInImage" />
@@ -79,9 +82,6 @@
 
 			<input on:change={showImage} id="files" style="display:none;" type="file" />
 			<button style="top: 70%;" on:click={submit}>Submit</button>
-			{#if error.length != 0}
-				<h2>{error}</h2>
-			{/if}
 		</div>
 	{/if}
 	{#if showCode === true}
@@ -172,8 +172,8 @@
 	}
 	h2 {
 		font-family: monospace;
-		/* position: absolute; */
-		/* top: 20%; */
+		position: absolute;
+		top: 20%;
 		padding: 10px;
 		width: 25%;
 		background-color: rgb(231, 52, 52);

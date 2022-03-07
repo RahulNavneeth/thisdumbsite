@@ -1,6 +1,10 @@
 <script lang="ts">
+	import Fa from 'svelte-fa';
+	import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
 	let code: string = '';
 	let status;
+	let showSpin: Boolean = false;
 	let error: String = '';
 	let CodeError: String = '';
 	const codeValidation = () => {
@@ -10,29 +14,34 @@
 				error = '';
 			}, 3000);
 		} else {
+			showSpin = true;
 		}
 	};
 </script>
 
 <div class="container">
-	{#if error.length != 0}
-		<h2>{error}</h2>
-	{/if}
-	{#if CodeError.length != 0}
-		<h2>{CodeError}</h2>
-	{/if}
-	<h1>Enter Code!!</h1>
-	<input bind:value={code} type="text" placeholder="code" />
-	<div class="btnContainer">
-		<div class="flexButton">
-			<a href={code.length === 0 ? ' ' : `dumb/${code}`}>
-				<button on:click={codeValidation}>Done?</button>
-			</a>
-			<a href="/create">
-				<button>Create?</button>
-			</a>
+	{#if showSpin === false}
+		{#if error.length != 0}
+			<h2>{error}</h2>
+		{/if}
+		{#if CodeError.length != 0}
+			<h2>{CodeError}</h2>
+		{/if}
+		<h1>Enter Code!!</h1>
+		<input bind:value={code} type="text" placeholder="code" />
+		<div class="btnContainer">
+			<div class="flexButton">
+				<a href={code.length === 0 ? ' ' : `dumb/${code}`}>
+					<button on:click={codeValidation}>Done?</button>
+				</a>
+				<a href="/create">
+					<button>Create?</button>
+				</a>
+			</div>
 		</div>
-	</div>
+	{:else}
+		<code style="background:pink;"><Fa icon={faSpinner} fw spin /></code>
+	{/if}
 </div>
 
 <style>
@@ -43,6 +52,18 @@
 		align-content: center;
 		justify-content: center;
 		/* height: 940px; */
+	}
+	code {
+		font-family: monospace;
+		position: absolute;
+		top: 40%;
+		background: #fff;
+		/* padding-left: 20px; */
+		/* padding-right: 10px; */
+		padding: 10px;
+		border-radius: 6px;
+		font-weight: 1000;
+		font-size: 35px;
 	}
 	button {
 		width: 130px;

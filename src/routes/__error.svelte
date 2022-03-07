@@ -1,10 +1,9 @@
 <script context="module">
-	export async function load({ status, error, params }) {
+	export async function load({ status, error }) {
 		return {
 			props: {
 				status,
-				error,
-				params
+				error
 			}
 		};
 	}
@@ -22,20 +21,22 @@
 <div class="container">
 	<div class="innerCon">
 		<!-- <h1><div class="innerErr">{params.room}</div></h1> -->
+
 		<h2>
 			<div class="innerErr">{status}</div>
 			:
 			<div class="innerErr">{error.message}</div>
 		</h2>
-		<a href="/"><code><Fa icon={faHome} /> Home</code></a>
+		<a href="/"><code style="margin: 10px;"><Fa icon={faHome} /></code></a>
 	</div>
 </div>
 
 <style>
 	.innerCon {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
+		justify-content: center;
 		width: 100%;
 		position: absolute;
 		top: 40%;

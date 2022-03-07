@@ -8,7 +8,7 @@
 
 		if (data.length === 0) {
 			return {
-				status: 302,
+				status: 500,
 				error: new Error('Enter A Valid code')
 				// redirect: '/'
 			};
@@ -52,7 +52,7 @@
 		</div>
 	{:else}
 		<div class="con">
-			<img style="border-radius: 20px;" src={data[0].imgurl} alt={data[0].id} />
+			<img style="border-radius: 20px;width:100%;" src={data[0].imgurl} alt={data[0].id} />
 			<code>{data[0].message}</code>
 		</div>
 	{/if}
