@@ -15,7 +15,7 @@
 		} else {
 			return {
 				props: {
-					data
+					dataGet: data
 				}
 			};
 		}
@@ -27,7 +27,7 @@
 	let top: number = 50;
 	let position = false;
 	let showData = false;
-	export let data;
+	export let dataGet;
 	// console.log(data);
 	const randomPercentValue = () => {
 		position = true;
@@ -35,8 +35,14 @@
 		top = Math.floor(Math.random() * 91);
 	};
 
-	const show = () => {
+	const show = async () => {
 		showData = true;
+		const { data, error } = await supabase
+			.from('dumbpost')
+			.update({ views: Number(dataGet[0]['views']) + 1 })
+			.match({ code: dataGet[0]['code'] });
+		console.log(data);
+		console.log(dataGet);
 	};
 </script>
 
@@ -52,8 +58,8 @@
 		</div>
 	{:else}
 		<div class="con">
-			<img style="border-radius: 20px;width:100%;" src={data[0].imgurl} alt={data[0].id} />
-			<code>{data[0].message}</code>
+			<img style="border-radius: 20px;width:100%;" src={dataGet[0].imgurl} alt={dataGet[0].id} />
+			<code>{dataGet[0].message}</code>
 		</div>
 	{/if}
 </div>
