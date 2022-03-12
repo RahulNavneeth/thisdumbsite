@@ -10,9 +10,6 @@
 </script>
 
 <script>
-	import { faHome } from '@fortawesome/free-solid-svg-icons';
-	import Fa from 'svelte-fa';
-
 	export let error;
 	export let status;
 	// export let params;
@@ -27,7 +24,7 @@
 			:
 			<div class="innerErr">{error.message}</div>
 		</h2>
-		<a href="/"><code style="margin: 10px;"><Fa icon={faHome} /></code></a>
+		<a href="/"><code style="margin: 10px;"><i class="fas fa-house-user" /></code></a>
 	</div>
 </div>
 

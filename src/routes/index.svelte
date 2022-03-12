@@ -1,7 +1,4 @@
 <script lang="ts">
-	import Fa from 'svelte-fa';
-	import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-
 	let code: string = '';
 	let status;
 	let showSpin: Boolean = false;
@@ -40,7 +37,7 @@
 			</div>
 		</div>
 	{:else}
-		<code style="background:pink;"><Fa icon={faSpinner} fw spin /></code>
+		<code style="background:pink;"><i class="fas fa-spinner fa-spin" /></code>
 	{/if}
 </div>
 

@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { supabase } from './supabase.js';
-	import Fa from 'svelte-fa';
-	import { faSpinner, faCopy, faHome } from '@fortawesome/free-solid-svg-icons';
 
 	import axios from 'axios';
 	let GenCode: string = '';
@@ -87,14 +85,14 @@
 	{#if showCode === true}
 		{#if dataGet.length === 0}
 			<code style="position:absolute;background:pink;top:50%;margin:10px;"
-				><Fa icon={faSpinner} fw spin /></code
+				><i class="fas fa-spinner fa-spin" /></code
 			>
 		{:else}
 			<div class="codeModal">
 				<div class="codeModalFl">
-					<code on:click={copy} style="cursor:pointer;margin:10px;"><Fa icon={faCopy} fw /></code>
+					<code on:click={copy} style="cursor:pointer;margin:10px;"><i class="fas fa-copy" /></code>
 					<code><a href="/dumb/{GenCode}">{GenCode}</a></code>
-					<a href="/"><code style="margin:10px;"><Fa icon={faHome} fw /></code></a>
+					<a href="/"><code style="margin:10px;"><i class="fas fa-house-user" /></code></a>
 				</div>
 			</div>
 		{/if}
