@@ -37,7 +37,7 @@
 			</div>
 		</div>
 	{:else}
-		<code style="background:pink;"><i class="fas fa-spinner fa-spin" /></code>
+		<code style="background:pink;">Loading...</code>
 	{/if}
 </div>
 

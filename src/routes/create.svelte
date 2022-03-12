@@ -90,9 +90,9 @@
 		{:else}
 			<div class="codeModal">
 				<div class="codeModalFl">
-					<code on:click={copy} style="cursor:pointer;margin:10px;"><i class="fas fa-copy" /></code>
+					<code on:click={copy} style="cursor:pointer;margin:10px;">Copy</code>
 					<code><a href="/dumb/{GenCode}">{GenCode}</a></code>
-					<a href="/"><code style="margin:10px;"><i class="fas fa-house-user" /></code></a>
+					<a href="/"><code style="margin:10px;">Home</code></a>
 				</div>
 			</div>
 		{/if}

@@ -24,7 +24,7 @@
 			:
 			<div class="innerErr">{error.message}</div>
 		</h2>
-		<a href="/"><code style="margin: 10px;"><i class="fas fa-house-user" /></code></a>
+		<a href="/"><code style="margin: 10px;">Home</code></a>
 	</div>
 </div>
 
