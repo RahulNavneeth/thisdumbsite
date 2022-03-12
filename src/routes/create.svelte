@@ -84,9 +84,7 @@
 	{/if}
 	{#if showCode === true}
 		{#if dataGet.length === 0}
-			<code style="position:absolute;background:pink;top:50%;margin:10px;"
-				><i class="fas fa-spinner fa-spin" /></code
-			>
+			<code style="position:absolute;background:pink;top:50%;margin:10px;">Loading...</code>
 		{:else}
 			<div class="codeModal">
 				<div class="codeModalFl">
