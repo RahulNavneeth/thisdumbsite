@@ -41,8 +41,6 @@
 			.from('dumbpost')
 			.update({ views: Number(dataGet[0]['views']) + 1 })
 			.match({ code: dataGet[0]['code'] });
-		console.log(data);
-		console.log(dataGet);
 	};
 </script>
 
