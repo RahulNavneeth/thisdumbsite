@@ -3,9 +3,7 @@
 
 	export async function load({ params }) {
 		const room: number = params.room;
-
 		const { data } = await supabase.from('dumbpost').select().match({ code: room });
-
 		if (data.length === 0) {
 			return {
 				status: 500,
